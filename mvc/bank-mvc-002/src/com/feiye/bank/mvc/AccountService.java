@@ -1,0 +1,46 @@
+package com.feiye.bank.mvc;
+
+import com.feiye.bank.exceptions.AppException;
+import com.feiye.bank.exceptions.MoneyNotEnoughException;
+
+/**
+ * service: 业务
+ * AccountService: 专门处理Account业务的一个类
+ * 业务类一般起名：XxxxService、XxxxBiz……
+ *
+ * @author feiye
+ * @version 1.0
+ * @since 1.0
+ */
+public class AccountService {
+    // 方法起名，要体现出处理的是什么业务
+    // 一个业务对应一个方法
+
+    // 定义在外面，每一个业务方法中都可能需要连接数据库
+    private AccountDao accountDao = new AccountDao();
+
+    /**
+     * 完成转账的业务逻辑
+     * @param fromActno 转出账号
+     * @param toActno 转入账号
+     * @param money 转账金额
+     */
+    public void transfer(String fromActno, String toActno, double money) throws MoneyNotEnoughException, AppException {
+        // 查询余额是否充足
+        Account fromAct = accountDao.selectByActno(fromActno);
+        if (fromAct.getBalance()<money) {
+            throw new MoneyNotEnoughException("余额不足");
+        }
+        // 余额充足
+        Account toAct = accountDao.selectByActno(toActno);
+        // 修改余额（只是修改了内存中Java对象的余额）
+        fromAct.setBalance(fromAct.getBalance() - money);
+        toAct.setBalance(toAct.getBalance() + money);
+        // 更新数据库中的余额
+        int count = accountDao.update(fromAct);
+        count += accountDao.update(toAct);
+        if (count != 2) {
+            throw new AppException("账户转账异常！");
+        }
+    }
+}

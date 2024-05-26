@@ -8,7 +8,9 @@ A Bank-Account Transfer System. I save here for learning MVC.
 `bank-mvc-002`：使用简单的MVC架构，仅以类来区分三层架构
 
 数据库表（SQL脚本），数据库名为`mvc`
-![image](https://github.com/feiyeee/Bank-Account-Transfer-System/assets/157361896/725c46ce-f550-4474-be59-aaec6f180dee)
+![image-20240526234249873](README.assets/image-20240526234249873.png)
+
+
 
 版本说明：
 * JDK17
