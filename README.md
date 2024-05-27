@@ -5,10 +5,25 @@ A Bank-Account Transfer System. I save here for learning MVC.
 
 项目模块说明：
 `bank-mvc-001`：不使用MVC架构实现简单的系统
+
 `bank-mvc-002`：使用简单的MVC架构，仅以类来区分三层架构
 
-数据库表（SQL脚本），数据库名为`mvc`
+`bank-mvc-003`：解决事务问题
+
+`bank-mvc-004`：引入ThreadLocal解决线程问题
+
+`bank-mvc-005`：将不同功能的类放在不同的包下
+
+`bank-mvc-last`：层与层之间面向接口编程
+
+
+
+数据库表，数据库名为`mvc`：
 ![image-20240526234249873](README.assets/image-20240526234249873.png)
+
+---
+
+![image-20240527113946453](README.assets/image-20240527113946453.png)
 
 
 
