@@ -16,7 +16,13 @@ A Bank-Account Transfer System. I save here for learning MVC.
 
 `bank-mvc-last`：层与层之间面向接口编程
 
+（以上Tomcat版本采用10.0.12）
+
+
+
 `bank-mybatis-001`：在银行转账系统中引入Maven，使用MyBatis框架，使用接口代理机制
+
+（以上Tomcat版本采用9.0.65）
 
 
 
@@ -33,4 +39,3 @@ A Bank-Account Transfer System. I save here for learning MVC.
 * JDK17
 * IDEA 2022.1.4
 * MySQL 8.0.27
-* Tomcat 10.0.12
