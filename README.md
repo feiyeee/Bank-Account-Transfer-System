@@ -16,6 +16,8 @@ A Bank-Account Transfer System. I save here for learning MVC.
 
 `bank-mvc-last`：层与层之间面向接口编程
 
+`bank-mybatis-001`：在银行转账系统中引入Maven，使用MyBatis框架，使用接口代理机制
+
 
 
 数据库表，数据库名为`mvc`：
